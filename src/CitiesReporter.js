@@ -2,9 +2,11 @@ import fs from "node:fs";
 import FormatterFactory from "./FormatterFactory.js";
 
 export default class CitiesReporter {
-  constructor({ formatType }) {
+  constructor({ formatType }, decorator = null) {
     console.log("Tipo Formato: " + formatType);
-    this.formatter = FormatterFactory.createFormatter(formatType);
+    this.formatter = decorator
+      ? decorator(FormatterFactory.createFormatter(formatType))
+      : FormatterFactory.createFormatter(formatType);
   }
 
   async report(filename) {
