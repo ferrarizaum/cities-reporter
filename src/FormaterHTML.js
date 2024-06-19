@@ -24,14 +24,18 @@ export default class FormaterHTML extends AbstractFormater {
     </body>
   </html>`;
 
-    fs.writeFile("./report.html", html, (err) => {
+    return html;
+  }
+
+  write(cities) {
+    const htmlContent = this.output(cities);
+
+    fs.writeFile("./report.html", htmlContent, (err) => {
       if (err) {
         console.error("Erro ao escrever o arquivo HTML:", err);
       } else {
         console.log("Arquivo HTML gerado com sucesso.");
       }
     });
-
-    return html;
   }
 }

@@ -10,14 +10,18 @@ export default class FormaterTXT extends AbstractFormater {
       txt += `- ${cities[i]["Nome"]}\n`;
     }
 
-    fs.writeFile("./output.txt", txt, "utf8", (error) => {
+    return txt;
+  }
+
+  write(cities) {
+    const txtContent = this.output(cities);
+
+    fs.writeFile("./output.txt", txtContent, "utf8", (error) => {
       if (error) {
         console.error("An error occurred while writing to the file:", error);
         return;
       }
       console.log("File has been written successfully.");
     });
-
-    return txt;
   }
 }

@@ -1,7 +1,9 @@
 export default class AbstractFormater {
-
-  output (cities) {
-    throw new Error('Should implement output method...');
+  output(cities) {
+    throw new Error("Should implement output method...");
   }
 
+  write(cities) {
+    throw new Error("Should implement output method...");
+  }
 }

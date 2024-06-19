@@ -12,6 +12,7 @@ export default class CitiesReporter {
   async report(filename) {
     const citiesJson = await fs.promises.readFile(filename, "utf8");
     const cities = JSON.parse(citiesJson);
+    this.formatter.write(cities);
     return this.formatter.output(cities);
   }
 }

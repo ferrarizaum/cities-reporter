@@ -13,3 +13,7 @@ reporter.report("./data/cidades-2.json").then(console.log);
 // Added Factory creational pattern
 // Added Strategy behavioral pattern
 // Added Decorator structural pattern
+
+//Implemented Interface Segregation Principle
+//Implemented Dependency Inversion Principle
+//Implemented The Single Responsibility Principle
