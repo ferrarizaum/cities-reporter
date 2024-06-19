@@ -6,7 +6,9 @@ to create a .html file<br>
 
 ## Using already existing Strategy behavioral pattern
 ## Added Factory creational pattern
+  for new Formatter instances.
 ## Added Decorator structural pattern
+  to decorate each type of formatter with a different console output.
 
 ## SOLID Principles used :
 Interface Segregation Principle, classes are only exposed to method they need<br>
